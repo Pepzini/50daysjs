@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --left-bg-color: rgba(48, 45, 185, 0.7);
+    --right-bg-color: rgba(44, 43, 83, 0.7);
+    --left-btn-hover: rgba(87, 84, 236, 1);
+    --right-btn-hover: rgb(32, 31, 61);
+    --right-hover-width: 75%;
+    --left-hover-width: 25%;
+    --spaed: 100ms;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+h1{
+    position: absolute;
+    font-size: 3.5rem;
+    color: #fff;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.btn{
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    border: 1px solid #fff;
+    font-size: 1rem;
+    padding: 1.5rem;
+    width: 15rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.split.left .btn:hover{
+    background-color: var(--left-btn-hover);
+    border-color: var(--left-btn-hover);
+}
+.split.right .btn:hover{
+    background-color: var(--right-btn-hover);
+    border-color: var(--right-btn-hover);
+}
+.split.right, .split.left, .split.right::before, .split.left::before{
+    transition: all var(--speed);
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left{
+    left: 0;
+    background-image: url(../images/ps5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+/*the style right above allows you to add overlay on an image*/
+.split.right{
+    right: 0;
+    background-image: url(../images/xbox.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+.hover-left .left{
+    width: var(--right-hover-width);
+}
+.hover-left .right{
+    width: var(--left-hover-width);
+}
+
+.hover-right .right{
+    width: var(--right-hover-width);
+}
+.hover-right .left{
+    width: var(--left-hover-width);
+}
+
+@media  (max-width: 800px) {
+    .split{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+    }
+    
+    .hover-left .left{
+        width: 100%;
+    }
+    .hover-left .right{
+        width: 100%;
+    }
+    
+    .hover-right .right{
+        width: 100%;
+    }
+    .hover-right .left{
+        width: 100%;
+    }
+    h1{
+        font-size: 2rem;
+        top: 35%;
+    }
+    .btn{
+        padding: 1.5rem;
+        width: 12rem;
+    }
+}

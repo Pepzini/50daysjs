@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Roboto',sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.counter{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.counter.hide{
+    transform: translate(-50%, -50%) scale(0);
+    animation: hide .2s ease-out;
+}
+@keyframes hide {
+    0%{
+     transform: translate(-50%, -50%) scale(1);
+  }
+    100%{
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+.go{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+}
+.go.show{
+    transform: translate(-50%, -50%) scale(1);
+    animation: show .2s ease-out;
+}
+button{
+   background-color: slateblue;
+   font-size: 20px;
+   border: none;
+   border-radius: 5px;
+   padding: 6px 10px;
+   cursor: pointer;
+   color: rgb(48, 46, 46);
+}
+button:active{
+    transform: scale(0.95);
+}
+@keyframes show {
+    0%{
+     transform: translate(-50%, -50%) scale(0);
+  }
+    30%{
+        transform: translate(-50%, -50%) scale(1.5) 
+    }
+    100%{
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+h3{
+    text-transform: capitalize;
+    font-size: 30px;
+    overflow: hidden;
+    margin: 5px;
+}
+.numbers{
+    position: relative;
+    font-size: 65px;
+    overflow: hidden;
+    width: 270px;
+    height: 70px;
+    color: slateblue;
+}
+.numbers span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    transform-origin: bottom center;
+}
+.numbers span.in{
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: goIn 0.5s ease-in-out;
+}
+.numbers span.out{
+    animation: goOut 0.5s ease-in-out;
+}
+@keyframes goIn {
+    0%{
+     transform: translate(-50%, -50%) rotate(120deg);
+  }
+    30%{
+        transform: translate(-50%, -50%) rotate(-20deg); 
+    }
+    60%{
+        transform: translate(-50%, -50%) rotate(10deg); 
+    }
+    100%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+@keyframes goOut {
+    0%{
+     transform: translate(-50%, -50%) rotate(0deg);
+  }
+    60%{
+        transform: translate(-50%, -50%) rotate(20deg); 
+    }
+    100%{
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}
+

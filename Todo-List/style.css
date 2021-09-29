@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgray;
+    font-family:'Poppins', sans-serif;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+}
+h1{
+    color: plum;
+    font-size: 8em;
+    text-align: center;
+    /* opacity: 0.4; */
+    margin: 0;
+}
+form{
+    box-shadow: 0 4px 10px #444444a4;
+    max-width: 100%;
+    width: 500px;
+}
+#input{
+    border: none;
+    color: #444;
+    font-size: 2rem;
+    padding:1rem 2rem;
+    display: block;
+    width: 100%;
+}
+.input:focus, .input:active{
+    border: none;
+    outline: none;
+}
+.inout::placeholder{
+    color: #d5d5d5;
+}
+.todos{
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.todos li{
+   cursor: pointer;
+   margin-right: auto;
+}
+/* .todos li::after{
+    content: '\f2ed';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 25px;
+    position: absolute;
+    color: rgb(209, 30, 30);
+    z-index: 0;
+} */
+.todo-item{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #5b3e72;
+    font-size: 1.5rem;
+   padding: 1rem;
+   cursor: pointer;
+
+}
+.todo-item i{
+   color: darkred;
+}
+
+.todos li.completed{
+    text-decoration:line-through;
+}
+@media (max-width:600px) {
+    h1{
+        font-size: 55px;
+    }
+    form{
+        width: 350px;
+        margin: 14px;
+    }
+    #input,
+    .todo-item{
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+canvas{
+    border: 1px solid saddlebrown;
+    height: 500px;
+    width: 800px;
+}
+.toolBox{
+    background-color: sienna;
+    border: 1px solid saddlebrown;
+    display: flex;
+    width: 800px;
+    padding: 1rem;
+}
+/*this styling directly below allows you to style all the directlt children inside the tookBox*/
+.toolBox > * {
+    background-color: #fff;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    margin: 0.25rem;
+     padding: 0.25rem;
+     cursor: pointer;
+}
+/*this stying moves the last element to the end at the left*/
+.toolBox > *:last-child{
+    margin-left: auto;
+}
+@media (max-width: 600px) {
+    canvas{ 
+        width: 230px;
+        height: 450px;
+        overflow: hidden;
+    }
+    .toolBox{
+        width: 230px;
+        padding: 1rem;
+    }
+}

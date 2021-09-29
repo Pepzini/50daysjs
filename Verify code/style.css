@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: coral;
+    font-family:'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    background-color: #e2dfe1;
+    border: 3px solid #000;
+    border-radius: 13px;
+    padding: 30px;
+    max-width: 120em;
+    text-align: center;
+}
+.code-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.code{
+    border-radius: 6px;
+    font-size: 65px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 300;
+    border: 1px solid #eca085;
+    -moz-appearance: textfield; /*this gets rid of the arrow on firefox*/
+}
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0; /* this styling allows you to remove the arrow at the input:number */
+}
+.code:valid{
+    border-color:#be471c;
+    box-shadow: 0 10px 10px -5px #222;
+}
+.info{
+    display: inline-block;
+    background-color: wheat;
+    padding: 10px;
+    line-height: 20px;
+    max-width: 40 0px;
+    border-radius: 5px;
+    color: dimgray;
+    font-size: 16px;
+    font-weight: bold;
+}
+@media (max-width:600px) {
+    .code-container{
+        flex-wrap: wrap;
+    }
+    .code{
+       font-size: 25px;
+       height: 70px;
+       max-width: 70px;
+       margin: 5px;
+    }
+}

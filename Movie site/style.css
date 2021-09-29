@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+  --primary-color :#280d4d;
+  --secondary-color: #7b49c0;
+  --transparemt-shade: #6f46aa9c;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family:'Poppins', sans-serif;
+    margin: 0;  
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--secondary-color);
+}
+.logo{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+.search{
+    background-color: transparent;
+    font-family: inherit;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 0.4px 1px;
+    color: #fff;
+}
+.search:focus{
+   outline: none;
+}
+#main{
+    display: flex;
+    
+}
+.movie{
+    width: 290px;
+    margin:29px 25px ;
+    padding: 4px;
+    background-color: var(--transparemt-shade);
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+}
+.movie h3{
+    margin: 0;
+    text-align: center;
+}
+.movie p{
+    text-align: justify;
+}
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    margin-top: 0;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.movie-info span.green{
+    color: lightgreen;
+}
+.movie-info span.red{
+    color: red;
+}
+.movie-info span.orange{
+    color: orange;
+}
+
+.overview{
+    background-color: #fff;
+    padding: 2rem;
+    max-height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(101%);
+    transition: 0.3s ease-in;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+
+}
+@media (max-width: 600px) {
+    #main{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .movie{
+        width: 250px;
+        margin: 10px;
+       
+    }
+   header{
+       flex-direction: column;
+   }
+}
