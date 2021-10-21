@@ -66,6 +66,3 @@ form.addEventListener('submit', (event) => {
 })
 
 //home-work, create a function that takes you to another page when you click on it
-movies.forEach(movie => {
-    
-});

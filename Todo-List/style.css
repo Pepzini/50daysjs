@@ -73,7 +73,7 @@ form{
    color: darkred;
 }
 
-.todos li.completed{
+.todo-item li.completed{
     text-decoration:line-through;
 }
 @media (max-width:600px) {

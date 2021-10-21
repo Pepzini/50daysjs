@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.container{
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #00253a;
+    overflow: hidden;
+    width: 400px;
+}
+.title{
+    margin: 0;
+}
+.subtitle{
+    display: inline-block;
+    margin: 5px 0 20px;
+    opacity: 0.8;
+}
+.header{
+    background-color: lightseagreen;
+    color: #fff;
+    padding: 30px 20px;
+}
+.header input{
+    width: 100%;
+    border-radius: 50px;
+    border: 0;
+    padding: 10px;
+    font-size: 15px 15px;
+    background-color: #6d6d6dac;
+    color: #fff;
+}.header input::placeholder{
+    color: white;
+}
+.input:focus{
+    outline: none;
+}
+
+.user-list{
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.user-list li{
+    display: flex;
+    padding: 20px;
+}
+.user-list img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 50px;
+    width: 50px;
+}
+.user-list .user-info{
+    margin-left: 10px;
+}
+.user-list .user-info h4{
+    margin: 0 0 10px;
+}
+.user-list .user-info p{
+    font-size: 12px;
+}
+
+.user-list li.hide{
+    display: none;
+}
+/* animation styling */
+ .user-list .animation-container{
+    /* position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+.animation-box{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+span{
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    animation:effect .6s linear infinite alternate;
+    transform: scale(0);
+}
+span:nth-child(1){
+    animation-delay: .1s;
+}
+span:nth-child(2){
+    animation-delay: .2s;
+}
+span:nth-child(3){
+    animation-delay: .3s;
+}
+span:nth-child(4){
+    animation-delay: .4s;
+    background-color: teal;
+}
+span:nth-child(5){
+    animation-delay: .3s;
+    background-color: teal;
+}
+@keyframes effect {
+    100%{
+        transform: scale(1);
+    }
+}
