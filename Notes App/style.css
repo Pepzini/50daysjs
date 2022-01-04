@@ -27,8 +27,9 @@ body{
     background-color: white;
     box-shadow: 0 0 10px 4px #0a0a0a31;
     margin: 30px 20px;
+    word-wrap: break-word;
     width: 400px;
-    height: 100px;
+    height: 300px;
 }
 .note .tools{
     background-color: darkgoldenrod;

@@ -1,7 +1,7 @@
 //personal task add different colors to each text
 const form = document.getElementById('form');
 const input = document.getElementById('input');
-const todosList = document.getElementById('todo');
+const todosList = document.getElementById('todos');
 const deleteTodo= document.getElementById('delete-icon')
 
 form.addEventListener('submit', (event) =>{
@@ -21,7 +21,7 @@ function addToDo(todo) {
        todoElement.classList.add('todo-item')
 
        if (todo && todo.completed) {
-          todoElement.classList.add('todo-item li.completed') 
+          todoElement.classList.add('completed') 
        }
        todoElement.innerHTML = `
        <li>${todoText}</li>

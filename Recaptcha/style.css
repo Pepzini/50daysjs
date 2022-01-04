@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    width: 100%;
+    max-width:  480px;
+    background-color: teal;
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.recaptcha-area{
+    width: 320px;
+    user-select: none;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative; 
+}
+/* .recaptcha-image img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    border-radius: 5px;
+    object-fit: cover;
+} */
+.recaptcha{
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    text-align: center;
+    width: 100%;
+    color: teal;
+    font-size: 35px;
+    font-family: sans-serif;  
+    letter-spacing: 10px;
+    transform: translate(-50%, -50%);   
+}
+.container button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container .recaptcha-area{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 65px;
+   margin: 30px 0 40px;
+}
+.container h1{
+    text-align: center;
+    color: #fff;
+}
+ .reload-button{
+     position: absolute;
+     left: 100%;
+     margin-left: 10px;
+    border-radius: 5px;
+    width: 75px;
+    height: 100%;
+    font-size: 25px;
+}
+.recaptcha-area i{
+    transition: transform 0.3s ease;
+}
+.form{
+    position: relative;
+    height: 60px;
+    width: 100%;
+}
+.form input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 1px solid brown;
+}
+.form input:is(:focus, :valid){
+    padding-left: 20px;
+    border: 2px solid darkcyan;
+}
+.form .submit-button{
+    position: absolute;
+    right: 7px;
+    top: 50%;
+   font-size: 17px;
+   height: 45px;
+   padding: 0 20px;
+   opacity: 0;
+   pointer-events: none;
+   background-color: lightseagreen;
+   transform: translateY(-50%);
+}
+.form input:valid + .submit-button{
+  opacity: 1;
+  pointer-events: auto;
+}
+.status-text{
+    display: none;
+    font-size: 19px;
+    color: lightcyan;
+    text-align: center;
+    margin: 20px 0 -5px 0;
+}
+
+.form .submit-button .reload-button .recaptcha .recaptcha-area .container {
+    backdrop-filter: blur(10px);
+    border: 1px solid darkmagenta;
+    border-top: 1px solid darkmagenta;
+    border-left: 1px solid darkmagenta;
+}
+/* @media (max-width:600) {
+    .recaptcha-area{
+        width: 200px;
+        font-size: 20px;
+    }
+    .recaptcha{
+        overflow: auto;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+     section{
+        width: 90%;
+     }
+} */
