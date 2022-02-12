@@ -30,7 +30,11 @@ header{
     border: 2px solid var(--primary-color);
     border-radius: 25px;
     font-size: 20px;
-    padding: 0.4px 1px;
+    padding: 4px;
+    color: #fff;
+}
+input::placeholder{
+    padding: 4px;
     color: #fff;
 }
 .search:focus{
@@ -38,10 +42,11 @@ header{
 }
 #main{
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .movie{
-    width: 290px;
+    width: 280px;
     margin:29px 25px ;
     padding: 4px;
     background-color: var(--transparemt-shade);
@@ -66,9 +71,10 @@ header{
     letter-spacing: 1px;
     color: #fff;
 }
-.movie-info span{
+span{
+    height: 30px;
     background-color: var(--primary-color);
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.3rem;
     margin-top: 0;
     font-weight: bold;
     border-radius: 5px;

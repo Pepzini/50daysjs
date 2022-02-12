@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Muli', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,7 +40,7 @@ section{
     top: 50%; 
     text-align: center;
     width: 100%;
-    color: teal;
+    color: #40916c;
     font-size: 35px;
     font-family: sans-serif;  
     letter-spacing: 10px;
@@ -86,11 +86,11 @@ section{
     font-size: 20px;
     padding-left: 20px;
     border-radius: 5px;
-    border: 1px solid brown;
+    border: 1px solid #74c69d;
 }
 .form input:is(:focus, :valid){
     padding-left: 20px;
-    border: 2px solid darkcyan;
+    border: 2px solid #1b4332;
 }
 .form .submit-button{
     position: absolute;
@@ -101,7 +101,7 @@ section{
    padding: 0 20px;
    opacity: 0;
    pointer-events: none;
-   background-color: lightseagreen;
+   background-color: #081c15;
    transform: translateY(-50%);
 }
 .form input:valid + .submit-button{

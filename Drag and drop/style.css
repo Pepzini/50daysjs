@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: darkslateblue;
+}
+
+.fill{
+    background-image: url('https://source.unsplash.com/random/150x150') ;
+     height: 145px;
+     width: 145px;
+     cursor: pointer;
+}
+
+.emptyBox{
+    height: 150px;
+    width: 150px;
+    border: 3px solid darkorange;
+    margin: 10px;
+    background: #fff;
+}
+.hold{
+    border: 3px solid rgb(238, 162, 162);
+}
+.hovered{
+    background-color: #333;
+    border-color: #fff;
+    border-style: dashed;
+}
+
+
+@media (max-width:800px) {
+    body{
+        flex-direction: column; 
+    }
+    
+}
